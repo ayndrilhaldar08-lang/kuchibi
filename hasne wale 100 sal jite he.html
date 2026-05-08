@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funny Surprise</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#f0f0f0;
+      overflow:hidden;
+    }
+
+    /* First Screen */
+    #firstPage{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width:100%;
+      height:100%;
+    }
+
+    .clickBox{
+      background:green;
+      color:white;
+      padding:25px 50px;
+      font-size:30px;
+      border-radius:15px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .clickBox:hover{
+      transform:scale(1.05);
+    }
+
+    /* Second Screen */
+    #secondPage{
+      display:none;
+      width:100%;
+      height:100%;
+      background:#fff5f7;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+    }
+
+    .message{
+      font-size:45px;
+      color:#ff4081;
+      font-weight:bold;
+      animation:pop 0.7s ease;
+    }
+
+    @keyframes pop{
+      from{
+        transform:scale(0.5);
+        opacity:0;
+      }
+      to{
+        transform:scale(1);
+        opacity:1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- First Page -->
+  <div id="firstPage">
+    <div class="clickBox" onclick="showPage()">
+      Click Here
+    </div>
+  </div>
+
+  <!-- Second Page -->
+  <div id="secondPage">
+    <div class="message">
+      Hasne wale 100 saal jite he 🥺👉👈
+    </div>
+  </div>
+
+  <script>
+    function showPage(){
+      document.getElementById("firstPage").style.display = "none";
+      document.getElementById("secondPage").style.display = "flex";
+    }
+  </script>
+
+</body>
+</html>
